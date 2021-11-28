@@ -8,7 +8,8 @@ RUN apt update && apt -y install lsb-release apt-transport-https ca-certificates
     && curl https://packages.sury.org/php/apt.gpg -o /etc/apt/trusted.gpg.d/php.gpg \
     && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list \
     && apt update \
-    && apt install -y build-essential php8.0-dev libphp8.0-embed libxml2-dev libsodium-dev libpcre3 libpcre3-dev zlib1g zlib1g-dev libargon2-dev
+    && apt install -y build-essential php8.0-dev libphp8.0-embed libxml2-dev libsodium-dev libpcre3 libpcre3-dev zlib1g zlib1g-dev libargon2-dev \
+    && apt install -y php8.0-mysqlnd php8.0-gd php8.0-zip php8.0-sqlite3
 
 RUN cd / \
     && curl -L -k https://github.com/puleeno/ngx_php7/tarball/master -o ngx_php7.tgz \
