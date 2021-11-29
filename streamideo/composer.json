@@ -1,0 +1,11 @@
+{
+    "name": "gerbils/gerbils",
+    "description": "Simple MVC Framework support ngx_php7",
+    "authors": [
+        {
+            "name": "Puleeno Nguyen",
+            "email": "puleeno@gmail.com"
+        }
+    ],
+    "require": {}
+}
