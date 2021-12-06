@@ -8,7 +8,7 @@ RUN apt update && apt -y install lsb-release apt-transport-https ca-certificates
     && curl https://packages.sury.org/php/apt.gpg -o /etc/apt/trusted.gpg.d/php.gpg \
     && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list \
     && apt update \
-    && apt install -y build-essential php8.1-dev libphp8.1-embed libxml2-dev libsodium-dev libpcre3 libpcre3-dev zlib1g zlib1g-dev libargon2-dev \
+    && apt install -y build-essential libc6-dev php8.1-dev libphp8.1-embed libxml2-dev libsodium-dev libpcre3 libpcre3-dev zlib1g zlib1g-dev libargon2-dev \
     && apt install -y php8.1-mysqlnd php8.1-gd php8.1-zip php8.1-sqlite3
 
 RUN cd / \
